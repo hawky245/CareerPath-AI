@@ -1,1 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareerPath AI</title>
 
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+<body>
+
+<div id="loginPage" class="container">
+
+    <div class="card login-card">
+        <h1>🚀 CareerPath AI</h1>
+        <p>Career Growth Recommendation System</p>
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="mobile" placeholder="Mobile Number">
+        <input type="email" id="email" placeholder="Email">
+
+        <button onclick="loginUser()">Login</button>
+    </div>
+
+</div>
+
+<div id="profilePage" class="container hidden">
+
+    <div class="card">
+
+        <h2>📋 Complete Your Profile</h2>
+
+        <label>Current Role</label>
+        <select id="currentRole">
+            <option>Software Engineer</option>
+            <option>Developer</option>
+            <option>Analyst</option>
+            <option>Student</option>
+        </select>
+
+        <label>Target Role</label>
+        <select id="targetRole">
+            <option>Senior Software Engineer</option>
+            <option>Team Lead</option>
+            <option>Manager</option>
+            <option>Data Scientist</option>
+        </select>
+
+        <label>Experience (Years)</label>
+        <input type="number" id="experience" value="2">
+
+        <label>Skill 1</label>
+        <input type="text" id="skill1" value="Python">
+
+        <label>Skill Level</label>
+        <select id="skillLevel1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <label>Skill 2</label>
+        <input type="text" id="skill2" value="SQL">
+
+        <label>Skill Level</label>
+        <select id="skillLevel2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <button onclick="saveProfile()">Save & Continue</button>
+
+    </div>
+
+</div>
+
+<div id="dashboard" class="hidden">
+
+    <div class="sidebar">
+
+        <h2>CareerPath AI</h2>
+
+        <button onclick="logout()">Logout</button>
+
+    </div>
+
+    <div class="main">
+
+        <div class="welcome-card">
+            <h2 id="welcomeText"></h2>
+        </div>
+
+        <div class="metrics">
+
+            <div class="metric-card">
+                <h3 id="timelineMetric">10 Months</h3>
+                <p>Promotion Timeline</p>
+            </div>
+
+            <div class="metric-card">
+                <h3 id="promotionMetric">70%</h3>
+                <p>Promotion Probability</p>
+            </div>
+
+            <div class="metric-card">
+                <h3 id="salaryMetric">10-18 LPA</h3>
+                <p>Expected Salary</p>
+            </div>
+
+        </div>
+
+        <div class="charts">
+
+            <div class="chart-card">
+                <h3>Promotion Readiness</h3>
+                <div id="promotionGauge"></div>
+            </div>
+
+            <div class="chart-card">
+                <h3>Skill Radar</h3>
+                <div id="radarChart"></div>
+            </div>
+
+        </div>
+
+        <div class="tabs">
+
+            <button class="tab-btn active" onclick="openTab(event,'skillGap')">
+                Skill Gap
+            </button>
+
+            <button class="tab-btn" onclick="openTab(event,'roadmap')">
+                Roadmap
+            </button>
+
+            <button class="tab-btn" onclick="openTab(event,'chat')">
+                AI Assistant
+            </button>
+
+        </div>
+
+        <div id="skillGap" class="tab-content active">
+
+            <h2>Skills You Need To Develop</h2>
+
+            <div id="skillGapList"></div>
+
+        </div>
+
+        <div id="roadmap" class="tab-content">
+
+            <h2>Career Roadmap</h2>
+
+            <ul id="roadmapList"></ul>
+
+        </div>
+
+        <div id="chat" class="tab-content">
+
+            <h2>AI Career Assistant</h2>
+
+            <div id="chatBox" class="chat-box"></div>
+
+            <input type="text" id="chatInput"
+                placeholder="Ask career questions">
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

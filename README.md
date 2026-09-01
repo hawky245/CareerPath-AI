@@ -143,23 +143,10 @@ Provides:
 - Industry trend analysis
 
 ---
+**NOTE
+CareerPath AI is a career planning platform that provides skill gap analysis, promotion readiness assessment, roadmap generation, and career growth recommendations.
 
-## Screenshots
-
-### Login Page
-Add screenshot here.
-
-### Profile Setup
-Add screenshot here.
-
-### Dashboard
-Add screenshot here.
-
-### Skill Gap Analysis
-Add screenshot here.
-
-### AI Career Assistant
-Add screenshot here.
+The architecture was designed to support future AI-powered recommendation capabilities.The original project concept included AI-assisted career recommendations. The current repository contains the available frontend implementation and dashboard components.
 
 ---
 

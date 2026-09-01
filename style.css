@@ -1,1 +1,213 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
+body{
+    background:#f4f7fb;
+}
+
+.hidden{
+    display:none;
+}
+
+.container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    width:450px;
+}
+
+.login-card{
+    text-align:center;
+}
+
+.card h1,
+.card h2{
+    margin-bottom:15px;
+}
+
+.card input,
+.card select{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.card button{
+    width:100%;
+    padding:12px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.card button:hover{
+    background:#1d4ed8;
+}
+
+.sidebar{
+    width:240px;
+    height:100vh;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#111827;
+    color:white;
+    padding:25px;
+}
+
+.sidebar h2{
+    margin-bottom:25px;
+}
+
+.sidebar button{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#ef4444;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.main{
+    margin-left:260px;
+    padding:20px;
+}
+
+.welcome-card{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.metrics{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.metric-card{
+    flex:1;
+    min-width:220px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.metric-card h3{
+    color:#2563eb;
+    font-size:28px;
+}
+
+.charts{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.chart-card{
+    flex:1;
+    min-width:350px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tabs{
+    margin-top:25px;
+}
+
+.tab-btn{
+    padding:10px 20px;
+    border:none;
+    background:#e5e7eb;
+    margin-right:8px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.tab-btn.active{
+    background:#2563eb;
+    color:white;
+}
+
+.tab-content{
+    display:none;
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.skill-bar{
+    width:100%;
+    height:15px;
+    background:#e5e7eb;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.skill-fill{
+    height:100%;
+    background:#22c55e;
+}
+
+.chat-box{
+    height:250px;
+    overflow-y:auto;
+    border:1px solid #ddd;
+    padding:10px;
+    margin-bottom:15px;
+    border-radius:8px;
+}
+
+#chatInput{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:8px;
+    border:1px solid #ddd;
+}
+
+#chat button{
+    padding:10px 20px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+ul li{
+    margin-bottom:10px;
+}
